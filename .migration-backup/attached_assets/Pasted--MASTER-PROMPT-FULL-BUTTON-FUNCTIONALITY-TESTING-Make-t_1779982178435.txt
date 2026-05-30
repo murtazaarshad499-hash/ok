@@ -1,0 +1,124 @@
+🚀 MASTER PROMPT — FULL BUTTON FUNCTIONALITY + TESTING
+
+Make the entire CRM fully functional by ensuring that every button, action, and interactive UI element works correctly across the whole application.
+
+🎯 CORE OBJECTIVE
+
+No button, icon, link, or UI action should be non-functional or dummy.
+Everything must trigger a real behavior, state change, or backend action.
+
+🧠 FUNCTIONALITY REQUIREMENTS
+1. GLOBAL INTERACTIVITY AUDIT
+Scan the entire codebase
+Identify every:
+button
+icon button
+dropdown action
+form submit
+modal trigger
+table action (edit/delete/view)
+navigation link
+Ensure NONE are placeholders or dead UI
+2. IMPLEMENT REAL BEHAVIOR
+
+For each interaction:
+
+Buttons must perform actual logic
+Forms must submit data (or simulate via state if backend not ready)
+Modals must open/close properly
+Navigation must route correctly
+Table actions must update UI state
+Filters/search must modify visible data
+
+If backend exists (Supabase), connect directly.
+If not, use clean mock state with realistic behavior.
+
+3. LEADS MODULE (CRITICAL)
+
+Ensure full working functionality:
+
+Add lead button → opens form → saves lead
+Edit lead → updates data
+Delete lead → removes entry
+Status change → updates pipeline
+Assign agent → updates record
+Notes → persist correctly
+Follow-up button → creates reminder entry
+Search/filter → fully functional
+4. PROPERTIES MODULE
+Add property works
+Edit property works
+Upload images (or mock upload state)
+Status toggle (available/sold/rented)
+Filters fully functional
+Property detail view opens correctly
+5. MESSAGES MODULE
+Send message works (UI + state update)
+Conversation switching works
+Search conversations works
+Attach button opens UI state
+Quick replies function properly
+6. ANALYTICS MODULE
+All filters update charts
+Time range selectors work
+KPI cards update from data
+Export buttons trigger placeholder download logic
+7. TEAM MODULE
+Add agent works
+Assign leads works
+Role changes update state
+Performance UI reflects changes
+8. DEALS MODULE
+Pipeline drag/drop (or click move) works
+Stage updates persist
+Deal creation works
+Progress updates dynamically
+9. DOCUMENT MODULE
+Upload button triggers upload UI
+File list updates correctly
+Delete/download actions work (or simulated)
+10. CALENDAR / FOLLOW-UPS
+Add reminder works
+Mark complete works
+Date selection works properly
+🧪 TESTING REQUIREMENTS
+
+After implementing functionality:
+
+Run a full UI test pass:
+Click EVERY button in the system
+Ensure no console errors
+Ensure no dead links
+Ensure no non-working modals
+Ensure no unhandled states
+Fix:
+broken event handlers
+missing state updates
+undefined actions
+UI freeze points
+🧱 ARCHITECTURE RULES
+Do NOT rewrite the project
+Do NOT change UI design system
+Only enhance functionality layer
+Keep components modular
+Reuse existing state logic
+Maintain Supabase readiness
+🎯 FINAL GOAL
+
+The CRM should feel like:
+
+a fully working SaaS product ready for real users
+
+NOT:
+
+demo UI
+static dashboard
+prototype shell
+⚡ OUTPUT EXPECTATION
+
+After completion:
+
+every button works
+every module is interactive
+no dead UI exists
+CRM behaves like production software

@@ -1,0 +1,4 @@
+- [Properties system architecture](properties-architecture.md) — full DB-backed Properties with adapter pattern, image upload via object storage, and React Query hooks.
+- [Object storage path convention](object-storage-paths.md) — objectPath stored in DB as `/objects/uploads/uuid`; display URL = `/api/storage/objects/uploads/uuid`.
+- [API-zod codegen conflict fix](api-zod-conflict.md) — `lib/api-zod/src/index.ts` must only export from `./generated/api`, not `./generated/types` (duplicates exist in both).
+- [Leads system status](leads-system-status.md) — fully wired leads system: DB seeded, API routes with requireAuth, frontend using React Query, profile page uses real API.

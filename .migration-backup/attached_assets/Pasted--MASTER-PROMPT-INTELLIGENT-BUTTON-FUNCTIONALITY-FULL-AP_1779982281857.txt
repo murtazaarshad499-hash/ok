@@ -1,0 +1,128 @@
+🚀 MASTER PROMPT — INTELLIGENT BUTTON FUNCTIONALITY + FULL APP LOGIC MAPPING
+
+Upgrade the entire CRM so that every interactive element is functionally correct based on its actual purpose in the system, not just visually connected.
+
+🧠 CORE OBJECTIVE
+
+The system must:
+
+Analyze the entire codebase structure (pages, components, state, and UI context)
+Understand what each button/action is intended to do
+Map each interaction to the correct business logic
+Implement realistic CRM behavior (not generic click handlers)
+
+Every button must behave according to its domain meaning inside a real estate CRM system.
+
+🧩 INTELLIGENT ACTION MAPPING (IMPORTANT)
+
+For every UI element:
+
+1. DETECT INTENT
+
+Determine what the element represents:
+
+Examples:
+
+“Add Lead” → create new lead record
+“Assign” → link lead to agent
+“Follow Up” → schedule reminder/task
+“Delete” → remove record with confirmation
+“Export” → generate downloadable dataset
+“Filter” → modify dataset view only
+“Send Message” → append communication thread
+“Mark as Sold” → update property status
+2. CONNECT TO REAL DATA LOGIC
+
+Each action must:
+
+update local state OR Supabase database (if connected)
+reflect changes instantly in UI
+maintain data consistency across modules
+update dependent UI components (tables, stats, analytics)
+3. CROSS-MODULE AWARENESS
+
+The system must understand relationships:
+
+Leads ↔ Agents
+Leads ↔ Follow-ups
+Properties ↔ Deals
+Messages ↔ Leads/Clients
+Deals ↔ Payments/Stages
+
+If a button affects one module, related modules must update accordingly.
+
+🧠 GLOBAL BEHAVIOR RULES
+UI Actions must NEVER be generic
+
+Avoid:
+❌ alert("clicked")
+❌ empty console logs
+❌ placeholder functions
+
+Every action must:
+✅ perform meaningful state change
+✅ reflect real CRM workflow
+✅ update UI instantly
+✅ preserve data structure integrity
+
+🏠 MODULE-SPECIFIC LOGIC
+LEADS MODULE
+Add Lead → creates new CRM lead entity
+Edit Lead → updates record
+Status Change → updates pipeline stage
+Assign Agent → links user to lead
+Follow-up → creates scheduled task/reminder
+WhatsApp Button → opens external chat with lead context
+PROPERTIES MODULE
+Add Property → creates inventory item
+Mark Sold/Rented → updates availability status
+Edit Property → modifies listing
+Compare → opens comparison view
+Filter → adjusts listing query
+MESSAGES MODULE
+Send Message → appends to conversation thread
+Open Chat → loads message history by lead/client
+Quick Reply → inserts template message
+Attach → adds file reference placeholder
+DEALS MODULE
+Move Stage → updates pipeline status
+Create Deal → links lead + property
+Update Progress → modifies deal percentage
+Close Deal → triggers completion state
+ANALYTICS MODULE
+Filters → recompute dataset views
+Time range → updates charts dynamically
+KPI cards → reflect aggregated state
+TEAM MODULE
+Assign Lead → updates ownership mapping
+Role Change → updates permissions state
+Performance → recalculates stats
+🔄 SYSTEM-WIDE REQUIREMENTS
+Maintain single source of truth for data
+Ensure state consistency across all modules
+Ensure all UI updates are reactive
+Prevent orphaned or unlinked data
+Preserve existing UI/UX design system
+🧪 SELF-VALIDATION STEP (CRITICAL)
+
+After implementation, simulate real user behavior:
+
+Add a lead → assign it → follow up → convert it
+Add a property → link it → mark it sold
+Send messages → verify thread updates
+Move deal stages → verify analytics updates
+
+If any flow breaks:
+→ fix immediately before finishing
+
+🎯 FINAL OUTCOME
+
+The CRM should behave like:
+
+a real enterprise-grade real estate operating system where every click has business meaning and system-wide impact
+
+NOT:
+
+UI mockup
+static dashboard
+disconnected components

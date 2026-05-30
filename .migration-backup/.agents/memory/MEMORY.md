@@ -1,0 +1,2 @@
+- [LuxeState migration patterns](luxestate-migration.md) — Next.js→Vite/Wouter porting rules; next-themes works in Vite with attribute="class"
+- [Wouter v3 nested Switch params](wouter-nested-switch-params.md) — param routes (:id) in a nested Switch never match; put them in the outermost Switch with their own layout wrapper.
